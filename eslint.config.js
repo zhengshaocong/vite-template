@@ -13,7 +13,6 @@ export default [
     ...pluginVue.configs['flat/essential'],
     {files: ['**/*.vue'], languageOptions: {parserOptions: {parser: tseslint.parser}}},
     {
-        plugins: ['sass', 'prettier'],
         rules:{
         // 代码格式相关
             'indent': ['error', 4, { 'SwitchCase': 1 }], // 强制使用 4 个空格缩进，case 语句缩进 1 级
@@ -85,22 +84,7 @@ export default [
             // 禁止多个连续空格，除了在注释和标记中
             'no-multi-spaces': ['error', {
                 'ignoreEOLComments': true,
-            }],
-            // 其他规则 scss
-            'prettier/prettier': 'error',
-            'sass/directive-sass-not-nested': 'error',
-            'sass/indentation': ['error', 2],
-            'sass/selector-no-qualifying-elements': 'error',
-            'sass/selector-pseudo-class-no-arguments': 'error',
-            'sass/selector-type-no-qualifying-elements': 'error',
-            'sass/property-sort-order': 'error',
-            'sass/at-rule-no-unknown': 'eorrr',
-            'sass/at-rule-no-unknown': [
-                'error',
-                {
-                    ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen'],
-                },
-            ],
+            }]
         },
     },
 ];
